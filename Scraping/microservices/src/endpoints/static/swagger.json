@@ -1,0 +1,123 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "description": "Code Endpoint API ",
+      "version": "1.0.0",
+      "title": "API Prueba",
+      "license": {
+        "name": "Prueba",
+        "url": "http://0.0.0.0:8081"
+      }
+    }
+  ,
+  "tags": [
+    {
+      "name": "API",
+      "description": "Doc api "
+    }
+  ],
+  "servers": [
+       {
+       "url": "/"
+       }
+   ],
+  "components": {
+    "schemas": {
+        "ContenSuper": {
+            "type": "object",
+            "properties": {
+              "url":{
+                "type": "string",
+                "example": "https://www.tiendasjumbo.co/supermercado/despensa/enlatados-y-conservas"
+              } 
+            }
+        },
+        "OutputSuper": {
+          "type": "object",
+          "properties": {
+            "products":{
+              "type": "array",
+              "name": {
+                "type": "string",
+                "example": "Atún En Aceite Van Camps x 160g x 4und"
+              },
+              "precio": {
+                "type": "string",
+                "example": "$ 29.990"
+              } 
+                
+            },
+            "title":{
+              "type": "string",
+              "example": "Enlatados y conservas | Tiendas Jumbo - Tiendas Jumbo"
+            },
+            "url":{
+              "type": "string",
+              "example": "https://www.tiendasjumbo.co/supermercado/despensa/enlatados-y-conservas"
+            } 
+          }
+        },
+        "FailSuper":{
+          "type": "object",
+            "properties": {
+              "status":{
+                "type": "string",
+                "example": "Failed to menu"
+              }
+            }
+        }, 
+        "FailOutputMenu":{
+          "type": "object",
+            "properties": {
+              "status":{
+                "type": "string",
+                "example": "Failed to menu"
+                  }
+            }
+        }
+        
+
+        
+    }
+  },
+
+  "paths": {
+    "/supermecado": {
+        "post": {
+          "tags": [
+              "API"
+          ],
+          "summary": "API",
+          "requestBody": {
+            "description": "Get list products",
+            "required": true,
+            "content": {
+                "application/json": {
+                  "schema": {
+                      "$ref": "#/components/schemas/ContenSuper"
+                      }
+                }
+            }
+          },
+          "responses": {
+              "200": {
+                  "description": "OK",
+                  "schema": {
+                  "$ref": "#/components/schemas/OutputSuper"
+                  }
+              },
+              "404": {
+                  "description": "NOT FOUND",
+                  "schema": {
+                  "$ref": "#/components/schemas/FailSuper"
+                  }
+                }
+            }
+          }
+      }    
+
+  }
+  
+}
+
+git config --global user.email salvador360201@gmail.com
