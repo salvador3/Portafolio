@@ -6,17 +6,16 @@ Table of Contents
 * [A Brief Introduction](#a-brief-introduction)
 * [Pre requisites](#pre-requisites)
 * [Running the API Service](#running-the-api-service)
-
 * [Checking the API](#checking-the-api)
 
 
 
 ## A Brief Introduction
 
-In this readme the two services are presented, the first one fails because walmart has an antibot protection so it only lets it load, the sample is in the image walmart_antibot.jpg in this directory.
+En este repositorio se usará para ejemplificar el uso de conceptos, bibliotecas y habilidades en software. 
 
-After the other supermarket service is displayed it gets the products in json format.
-
+Cada endpoint hace uso de una url para ser usado, sirviendo como microservicio.
+El primero /supermecado, funciona como un ejemplo de un bot que obtiene los datos se forma automatica usando la libreria de Selenium y regresa en formato json la respuesta que se obtiene
 
 ## Pre requisites
 

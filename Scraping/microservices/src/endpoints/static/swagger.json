@@ -75,9 +75,6 @@
                   }
             }
         }
-        
-
-        
     }
   },
 
@@ -119,5 +116,3 @@
   }
   
 }
-
-git config --global user.email salvador360201@gmail.com
